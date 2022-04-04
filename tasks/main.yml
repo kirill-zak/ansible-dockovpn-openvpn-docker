@@ -1,0 +1,21 @@
+---
+- name: Create dockovpn OpenVPN volumes
+  community.docker.docker_volume:
+    name: "{{ dockovpn_openvpn_docker_container_volume }}"
+
+- name: Create dockovpn OpenVPN container
+  community.docker.docker_container:
+    name: "{{ dockovpn_openvpn_docker_container_name }}"
+    image: "alekslitvinenk/openvpn:{{ dockovpn_openvpn_docker_tag }}"
+    state: started
+    restart_policy: unless-stopped
+    init: true
+    capabilities:
+      - net_admin
+    env:
+      HOST_ADDR: '{{ dockovpn_openvpn_docker_host_ip }}'
+    published_ports:
+      - "1194:1194/udp"
+      - "{{ dockovpn_openvpn_docker_configuration_port }}:8080/tcp"
+    volumes:
+      - "{{ dockovpn_openvpn_docker_container_volume }}:/opt/Dockovpn_data"

@@ -1,0 +1,19 @@
+galaxy_info:
+  author: kirill_zak
+  role_name: dockovpn_openvpn_docker
+  description: OpenVPN in a Docker container for Ubuntu
+  company: https://kirill-zak.ru
+  license: GPL-2.0
+  min_ansible_version: '2.12'
+  platforms:
+    - name: Ubuntu
+      versions:
+        - focal
+        - bionic
+        - xenial
+  galaxy_tags: 
+    - docker
+    - openvpn
+    - vpn
+
+dependencies: []

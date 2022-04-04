@@ -1,0 +1,23 @@
+---
+- name: Verify
+  hosts: all
+  tasks:
+  - name: Get information about OpenVPN configuration volume
+    community.docker.docker_volume_info:
+      name: dockovpn_openvpn_configuration
+    register: dockovpn_openvpn_configuration_status
+
+  - name: Does OpenVPN configuration volume exist?
+    assert:
+      that:
+        - dockovpn_openvpn_configuration_status.exists
+
+  - name: Get information about OpenVPN container
+    community.docker.docker_container_info:
+      name: dockovpn_openvpn
+    register: dockovpn_openvpn_container_status
+
+  - name: Does OpenVPN container exist?
+    assert:
+      that:
+        - dockovpn_openvpn_container_status.exists
