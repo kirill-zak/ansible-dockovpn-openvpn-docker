@@ -21,13 +21,18 @@ jobs:
           python-version: '3.x'
 
       - name: Install lint dependencies
-        run: pip3 install yamllint ansible-lint flake8
+        run: pip3 install yamllint ansible-lint
+
+      - name: Install required collections
+        run: ansible-galaxy collection install community.docker
+
+      - name: Install required roles
+        run: ansible-galaxy install geerlingguy.pip kirill_zak.ansible_docker
 
       - name: Run linter
         run: |
           yamllint .
           ansible-lint
-          flake8
 
   molecule:
     name: Molecule
@@ -51,6 +56,12 @@ jobs:
 
       - name: Install test dependencies
         run: pip3 install ansible molecule[docker] docker
+
+      - name: Install required collections
+        run: ansible-galaxy collection install community.docker
+
+      - name: Install required roles
+        run: ansible-galaxy install geerlingguy.pip kirill_zak.ansible_docker
 
       - name: Run Molecule tests
         run: molecule test
