@@ -16,6 +16,6 @@
       HOST_ADDR: '{{ dockovpn_openvpn_docker_host_ip }}'
     published_ports:
       - "1194:1194/udp"
-      - "{{ dockovpn_openvpn_docker_configuration_portP }}:8080/tcp"
+      - "{{ dockovpn_openvpn_docker_configuration_port }}:8080/tcp"
     volumes:
       - "{{ dockovpn_openvpn_docker_container_volume }}:/opt/Dockovpn_data"
