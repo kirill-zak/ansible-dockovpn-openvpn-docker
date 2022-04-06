@@ -10,6 +10,7 @@
     state: started
     restart_policy: unless-stopped
     init: true
+    log_driver: "{{ dockovpn_openvpn_docker_log_driver }}"
     capabilities:
       - net_admin
     env:

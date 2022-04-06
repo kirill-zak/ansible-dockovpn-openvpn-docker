@@ -3,4 +3,5 @@ dockovpn_openvpn_docker_container_name: dockovpn_openvpn
 dockovpn_openvpn_docker_container_volume: dockovpn_openvpn_configuration
 dockovpn_openvpn_docker_host_ip: 127.0.0.1
 dockovpn_openvpn_docker_configuration_port: 8080
+dockovpn_openvpn_docker_log_driver: none
 dockovpn_openvpn_docker_tag: latest
