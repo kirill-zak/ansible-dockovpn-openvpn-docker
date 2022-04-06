@@ -1,3 +1,6 @@
+[![CI](https://github.com/kirill-zak/ansible-dockovpn-openvpn-docker/actions/workflows/ci.yml/badge.svg)](https://github.com/kirill-zak/ansible-dockovpn-openvpn-docker/actions/workflows/ci.yml)
+[![Release](https://github.com/kirill-zak/ansible-dockovpn-openvpn-docker/actions/workflows/release.yml/badge.svg)](https://github.com/kirill-zak/ansible-dockovpn-openvpn-docker/actions/workflows/release.yml)
+
 dockovpn_openvpn_docker
 =========
 
