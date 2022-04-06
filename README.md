@@ -15,7 +15,7 @@ Role Variables
 - `dockovpn_openvpn_docker_container_volume`: Name of container volume
 - `dockovpn_openvpn_docker_host_ip`: Host IP
 - `dockovpn_openvpn_docker_configuration_port`: Port for get configuration
-- `dockovpn_openvpn_docker_log_driver`: Logger driver. Default value is `none` for disable log
+- `dockovpn_openvpn_docker_log_driver`: Logger driver. Default value is `none` for disable log. List of available logger drivers # https://docs.docker.com/config/containers/logging/configure/#supported-logging-drivers
 - `dockovpn_openvpn_docker_tag` Tag found at # https://hub.docker.com/r/alekslitvinenk/openvpn/tags
 
 Dependencies
