@@ -2,6 +2,7 @@
 - name: Create dockovpn OpenVPN volumes
   community.docker.docker_volume:
     name: "{{ dockovpn_openvpn_docker_container_volume }}"
+  changed_when: false
 
 - name: Create dockovpn OpenVPN container
   community.docker.docker_container:
@@ -20,3 +21,4 @@
       - "{{ dockovpn_openvpn_docker_configuration_port }}:8080/tcp"
     volumes:
       - "{{ dockovpn_openvpn_docker_container_volume }}:/opt/Dockovpn_data"
+  changed_when: false

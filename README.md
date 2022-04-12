@@ -4,7 +4,16 @@
 dockovpn_openvpn_docker
 =========
 
- OpenVPN in a Docker container for Ubuntu
+ OpenVPN in a Docker container
+
+## Support distributive
+
+* CentOS 8
+* Debian 10 (Buster)
+* Debian 11 (Bullseye)
+* Fedora 35
+* Ubuntu 18.04 (Bionic Beaver)
+* Ubuntu 20.04 (Focal Fossa)
 
 Requirements
 ------------
