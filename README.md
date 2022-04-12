@@ -4,7 +4,16 @@
 dockovpn_openvpn_docker
 =========
 
- OpenVPN in a Docker container for Ubuntu
+ OpenVPN in a Docker container
+
+## Support distributive
+
+* CentOS 8
+* Debian 10 (Buster)
+* Debian 11 (Bullseye)
+* Fedora 35
+* Ubuntu 18.04 (Bionic Beaver)
+* Ubuntu 20.04 (Focal Fossa)
 
 Requirements
 ------------
@@ -35,7 +44,7 @@ Example Playbook
       vars:
         dockovpn_openvpn_docker_host_ip: 192.168.0.1
       roles:
-        - role: kirill_zak.ansible_docker
+        - role: kirill_zak.docker
         - role: kirill_zak.dockovpn_openvpn_docker
 
 License

@@ -1,6 +1,7 @@
 ---
 - name: Converge
   hosts: all
+
   pre_tasks:
     - name: Update apt cache
       ansible.builtin.apt:
@@ -8,13 +9,16 @@
         cache_valid_time: 600
       changed_when: false
       when: ansible_pkg_mgr == "apt"
+
   vars:
     pip_package: python3-pip
     pip_install_packages:
       - name: docker
+
   roles:
     - geerlingguy.pip
-    - kirill_zak.ansible_docker
+    - kirill_zak.docker
+
   tasks:
     - name: "Include kirill_zak.dockovpn_openvpn_docker"
       include_role:

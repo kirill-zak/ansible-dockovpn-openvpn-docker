@@ -27,7 +27,7 @@ jobs:
         run: ansible-galaxy collection install community.docker
 
       - name: Install required roles
-        run: ansible-galaxy install geerlingguy.pip kirill_zak.ansible_docker
+        run: ansible-galaxy install geerlingguy.pip kirill_zak.docker
 
       - name: Run linter
         run: |
@@ -41,6 +41,10 @@ jobs:
     strategy:
       matrix:
         distro:
+          - centos8
+          - debian10
+          - debian11
+          - fedora35
           - ubuntu2004
           - ubuntu1804
 
@@ -60,7 +64,7 @@ jobs:
         run: ansible-galaxy collection install community.docker
 
       - name: Install required roles
-        run: ansible-galaxy install geerlingguy.pip kirill_zak.ansible_docker
+        run: ansible-galaxy install geerlingguy.pip kirill_zak.docker
 
       - name: Run Molecule tests
         run: molecule test
