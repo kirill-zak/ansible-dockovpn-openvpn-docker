@@ -44,7 +44,7 @@ Example Playbook
       vars:
         dockovpn_openvpn_docker_host_ip: 192.168.0.1
       roles:
-        - role: kirill_zak.ansible_docker
+        - role: kirill_zak.docker
         - role: kirill_zak.dockovpn_openvpn_docker
 
 License
