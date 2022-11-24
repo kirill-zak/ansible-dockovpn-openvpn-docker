@@ -12,6 +12,7 @@ dockovpn_openvpn_docker
 * Debian 10 (Buster)
 * Debian 11 (Bullseye)
 * Fedora 35
+* Fedora 36
 * Ubuntu 18.04 (Bionic Beaver)
 * Ubuntu 20.04 (Focal Fossa)
 * Ubuntu 22.04 (Jammy Jellyfish)
