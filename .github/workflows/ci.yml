@@ -42,16 +42,25 @@ jobs:
       fail-fast: false
       
       matrix:
-        distr:
-          - geerlingguy/docker-centos8
-          - geerlingguy/docker-debian10
-          - geerlingguy/docker-debian11
-          - geerlingguy/docker-fedora35
-          - geerlingguy/docker-fedora36
-          - geerlingguy/docker-ubuntu2004
-          - geerlingguy/docker-ubuntu1804
-          - geerlingguy/docker-ubuntu2204
-          - kirillzak/docker-almalinux9
+        include:
+          - distr: geerlingguy/docker-centos8
+            command: "/usr/sbin/init"
+          - distr: geerlingguy/docker-debian10
+            command: "/usr/sbin/init"
+          - distr: geerlingguy/docker-debian11
+            command: "/usr/sbin/init"
+          - distr: geerlingguy/docker-fedora35
+            command: "/usr/sbin/init"
+          - distr: geerlingguy/docker-fedora36
+            command: "/usr/sbin/init"
+          - distr: geerlingguy/docker-ubuntu2004
+            command: "/usr/sbin/init"
+          - distr: geerlingguy/docker-ubuntu1804
+            command: "/usr/sbin/init"
+          - distr: geerlingguy/docker-ubuntu2204
+            command: "/usr/sbin/init"
+          - distr: kirillzak/docker-almalinux9
+            command: "/usr/sbin/init"
 
     steps:
       - name: Checkout the codebase
