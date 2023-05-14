@@ -4,16 +4,15 @@ dependency:
 lint: |
   set -e
   yamllint .
-  ansible-lint
+  ansible-lint .
 driver:
   name: docker
 platforms:
   - name: instance
-    image: "${MOLECULE_DISTR:-geerlingguy/docker-ubuntu2204}-ansible:${MOLECULE_TAG:-latest}"
+    image: "${MOLECULE_DISTR:-kirillzak/docker-centos-ansible}:${MOLECULE_TAG:-latest}"
     command: ${MOLECULE_DOCKER_COMMAND:-""}
     volumes:
       - /sys/fs/cgroup:/sys/fs/cgroup:ro
-      - /var/lib/docker/aufs:/var/lib/docker/aufs/
     privileged: true
     pre_build_image: true
 provisioner:
