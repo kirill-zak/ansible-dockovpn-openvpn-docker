@@ -1,5 +1,6 @@
 ---
-- hosts: localhost
+- name: Localhost
+  hosts: localhost
   remote_user: root
   roles:
-    - ansible_dockovpn_openvpn_docker
+    - dockovpn_openvpn_docker
